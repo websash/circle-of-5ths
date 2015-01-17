@@ -1,0 +1,24 @@
+{
+	// == enforcing opts
+	"curly": false,
+	"latedef": "nofunc",
+	"newcap": false,
+	"noarg": true,
+	"undef": true,
+	"unused": true,
+	"quotmark": "single",
+	"strict": true,
+	// == relaxing opts
+	"lastsemic": true,
+	"expr": true,
+	"laxbreak": true,
+    "laxcomma": false,
+	// == environments
+    "browser": true,
+    "browserify": true,
+    "devel": true,
+    "globals": {
+    	"Snap": true,
+    	"mina": true
+    }
+}
