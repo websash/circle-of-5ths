@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<title>Circle of 5ths</title>
+		<meta name="description" content="Circle of fifths memo"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" >
+		<link rel="import" href="bower_components/paper-toast/paper-toast.html">
+		<link rel="import" href="bower_components/paper-progress/paper-progress.html">
+		<link rel="import" href="bower_components/paper-slider/paper-slider.html">
+		<!-- inject:css -->
+		<link rel="stylesheet" href="circle-of-5ths.0.0.1.css">
+		<!-- endinject -->
+	</head>
+	<body>
+	  <paper-progress id="sampls-loading" value="0"></paper-progress>
+	  <paper-toast id="toast" style="display: none;"><div class="tap">close</div></paper-toast>
+		<div id="c5">
+			<div class="sidebar">
+				<h1 class="title">Circle of 5ths</h1>
+				<section class="legend">
+					<div>
+						<h2>Chord Types</h2>
+						<ul>
+							<li class="maj">Major</li>
+							<li class="min">Minor</li>
+							<li class="dim">Diminished</li>
+						</ul>
+					</div>
+					<div>
+						<h2>Mode Tonic</h2>
+						<ul class="mt">
+							<li class="ionian maj"><span>Ionian <span class="mode">(major)</span></span></li>
+							<li class="dorian min"><span>Dorian<span class="mode"></span></span></li>
+							<li class="phrygian min"><span>Phrygian<span class="mode"></span></span></li>
+							<li class="lydian maj"><span>Lydian<span class="mode"></span></span></li>
+							<li class="mixolydian maj"><span>Mixolydian<span class="mode"></span></span></li>
+							<li class="aeolian min"><span>Aeolian <span class="mode">(nat. minor)</span></span></li>
+							<li class="locrian dim"><span>Locrian<span class="mode"></span></span></li>
+						</ul>
+					</div>
+					<div id="settings" class="loading">
+						<h2>Settings</h2>
+						<label>volume</label>
+						<paper-slider id="volfader" min="0" max="100" value="50" pin></paper-slider><br/>
+						<label>tempo</label>
+						<paper-slider id="tempo" min="20" max="150" value="55" pin></paper-slider><br/>
+					</div>
+				</section>
+			</div>
+			<div class="cont">
+				<svg id="circle-of-5ths" viewBox="0 0 1024 1024"></svg>
+			</div>
+		</div>
+		<a class="icon gh" href="https://github.com/websash/circle-of-5ths">view source code</a>
+		<!-- inject:js -->
+		<script src="circle-of-5ths.0.0.1.js"></script>
+		<!-- endinject -->
+	</body>
+</html>
